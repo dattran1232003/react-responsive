@@ -1,13 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import * as Breakpoints from './Screen'
 import { useDeviceWidth } from './hooks'
 import { ResponsiveContext } from './context'
+import { Mobile, Tablet, Laptop, Any } from './Screen'
 
 // export all screen breakpoint (Mobile, Tablet, Laptop,...) with Responsive component
 // user can use <Responsive.Mobile /> instead of <Mobile />
 // without import { Mobile } from 'responsive'
-Object.assign(Responsive, Breakpoints)
+//Object.assign(Responsive, Breakpoints)
+
+Responsive.Mobile = Mobile
+Responsive.Tablet = Tablet
+Responsive.Laptop = Laptop
+Responsive.Any    = Any
 
 Responsive.propTypes = {
   children: PropTypes.node,
