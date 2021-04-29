@@ -1,10 +1,10 @@
 {
-  "name": "react-responsive-component",
+  "name": "@dat/react-responsive",
   "version": "1.0.0",
   "description": "Made with create-react-library",
   "author": "dattran1232003",
   "license": "MIT",
-  "repository": "dattran1232003/react-responsive-component",
+  "repository": "dattran1232003/react-responsive",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
