@@ -1,7 +1,7 @@
 import React from "react"
 import { act } from "react-dom/test-utils"
 import { render, unmountComponentAtNode } from "react-dom"
-import Responsive, { Mobile, Tablet, Laptop } from "./"
+import Responsive, { Mobile, Tablet, Laptop, createBreakpoints } from "./"
 
 let container = null
 
@@ -93,10 +93,12 @@ it("should render 2 differences breakpoint at the same screen when not provide '
   expect(container.textContent).toBe('Mobile screen'+'Laptop screen')
 })
 
-it('should render even screen width gte breakpoint',() => {
+it('should render even screen width greater than (or equal) breakpoint',() => {
   resizeWindowThenMount(720)( // larger than mobile breakpoint
       <Mobile andUp>Mobile and up</Mobile>
   )
   // but it still render
   expect(container.textContent).toBe('Mobile and up')
 })
+
+it('should react a breakpoint')
