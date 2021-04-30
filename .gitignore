@@ -9,6 +9,9 @@ build
 dist
 .rpt2_cache
 
+# example
+example/node_modules
+
 # misc
 .DS_Store
 .env

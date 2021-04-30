@@ -7,7 +7,6 @@ import { Mobile, Tablet, Laptop, Any } from './Screen'
 // export all screen breakpoint (Mobile, Tablet, Laptop,...) with Responsive component
 // user can use <Responsive.Mobile /> instead of <Mobile />
 // without import { Mobile } from 'responsive'
-//Object.assign(Responsive, Breakpoints)
 
 Responsive.Mobile = Mobile
 Responsive.Tablet = Tablet

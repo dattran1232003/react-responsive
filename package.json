@@ -1,6 +1,6 @@
 {
-  "name": "@dattr/react-responsive",
-  "version": "1.0.0",
+  "name": "@dattr/react-responsive-component",
+  "version": "1.0.1",
   "description": "Made with create-react-library",
   "author": "dattran1232003",
   "license": "MIT",
@@ -26,8 +26,8 @@
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build"
   },
-  "peerDependencies": {
-    "react": "^16.0.0"
+  "peerDependencies":{ 
+    "react": "^17.0.2"
   },
   "devDependencies": {
     "microbundle-crl": "^0.13.10",
@@ -46,6 +46,7 @@
     "gh-pages": "^2.2.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.4",
+    "react": "^17.0.2",
     "react-scripts": "^3.4.1"
   },
   "files": [
@@ -56,7 +57,5 @@
   },
   "homepage": "https://github.com/dattran1232003/react-responsive#readme",
   "dependencies": {
-    "react": "*",
-    "prop-types": "*"
   }
 }

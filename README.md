@@ -7,12 +7,15 @@
 ## Install
 
 ```bash
-npm install --save react-responsive-component
+npm i -s @dattr/react-responsive
 ```
-
+Or with yarn:
+```bash
+yarn add -s @dattr/react-responsive
+```
 ## Usage
 
-```jsx
+```javascriptreact
 import React, { Component } from 'react'
 
 import MyComponent from 'react-responsive-component'
