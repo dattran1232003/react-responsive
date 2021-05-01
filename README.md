@@ -1,25 +1,44 @@
 ## react-responsive
+A distinct way to make your React app responsive. **Fast, simple syntax, lightweight** and make your code **easy-to-read** are the things what its aim for.
 
-[![NPM](https://img.shields.io/badge/Open%20In-codeSandbox-blue)](https://codesandbox.io/s/react-responsive-test-bk2ho)
+## Quick Start
 
-## Install
-
-With npm:
 ```bash
-npm i -s @dattr/react-responsive
-```
-Or with yarn:
-```bash
-yarn add -s @dattr/react-responsive
+npm i @dattr/react-responsive
 ```
 ## Usage
+[[!CodeSandbox](https://img.shields.io/badge/Open%20In-codeSandbox-blue)](https://codesandbox.io/s/react-responsive-test-bk2ho)
 
-React hook:
-```javascriptreact
-import React, { Component } from 'react'
-import MyComponent from '@dattr/react-responsive'
+```jsx
+import React from 'react'
+import Responsive, {
+  Mobile,
+  Tablet,
+  Laptop
+} from "@dattr/react-responsive-component";
 
-function 
+export default function App() {
+  return (
+    <div className="one-device">
+      <Responsive>
+        <Mobile>
+          <h3 className="mobile">Mobile Screen</h3>
+          
+        </Mobile>
+
+        <Tablet only>
+          <h2 className="tablet">Tablet Screen</h2>
+        </Tablet>
+
+        <Laptop only andUp>
+          {/* Laptop screen and up*/}
+          <h1 className="laptop">Laptop Screen and up</h1>
+        </Laptop>
+      </Responsive>
+    </div>
+  );
+}
+
 ```
 
 ## License
