@@ -8,15 +8,16 @@
     "type": "git",
     "url": "git+https://github.com/dattran1232003/react-responsive.git"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.modern.js",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.module.js",
+  "exports": "./dist/index.modern.js",
   "source": "src/index.js",
   "engines": {
     "node": ">=10"
   },
   "scripts": {
-    "build": "microbundle-crl --no-compress --no-sourcemap --format modern,cjs",
-    "start": "microbundle-crl watch --no-sourcemap --no-compress --format modern,cjs",
+    "build": "microbundle-crl --no-sourcemap",
+    "start": "microbundle-crl watch --no-sourcemap --format modern,module,umd",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
@@ -58,5 +59,8 @@
     "url": "https://github.com/dattran1232003/react-responsive/issues"
   },
   "homepage": "https://github.com/dattran1232003/react-responsive#readme",
+  "mangle": { 
+    "regex": "^_"
+  },
   "dependencies": {}
 }
