@@ -1,10 +1,14 @@
 ## react-responsive
 A distinct way to make your React app responsive. **Fast, simple syntax, lightweight** and make your code **easy-to-read** are the things what its aim for.
 
-## Quick Start
-
+## Install
+Using NPM:
 ```bash
 npm i @dattr/react-responsive
+```
+Using Yarn:
+```bash
+yarn add @dattr/react-responsive
 ```
 ## Usage
 [![NPM](https://img.shields.io/badge/Open%20In-codeSandbox-blue)](https://codesandbox.io/s/react-responsive-test-bk2ho)
