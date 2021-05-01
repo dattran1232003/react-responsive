@@ -2,7 +2,7 @@
 
 [![NPM](https://img.shields.io/badge/Open%20In-codeSandbox-blue)](https://codesandbox.io/s/react-responsive-test-bk2ho)
 
-## Install
+## Quick Start
 
 With npm:
 ```bash

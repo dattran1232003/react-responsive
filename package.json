@@ -8,8 +8,8 @@
     "type": "git",
     "url": "git+https://github.com/dattran1232003/react-responsive.git"
   },
-  "main": "./dist/index.umd.js",
-  "module": "./dist/index.modern.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "exports": "./dist/index.modern.js",
   "source": "src/index.js",
   "engines": {
