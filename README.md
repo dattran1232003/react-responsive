@@ -7,7 +7,7 @@ A distinct way to make your React app responsive. **Fast, simple syntax, lightwe
 npm i @dattr/react-responsive
 ```
 ## Usage
-[[!CodeSandbox](https://img.shields.io/badge/Open%20In-codeSandbox-blue)](https://codesandbox.io/s/react-responsive-test-bk2ho)
+[![NPM](https://img.shields.io/badge/Open%20In-codeSandbox-blue)](https://codesandbox.io/s/react-responsive-test-bk2ho)
 
 ```jsx
 import React from 'react'
