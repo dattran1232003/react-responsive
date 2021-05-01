@@ -1,8 +1,6 @@
-## react-responsive-component
+## react-responsive
 
-A distinct way to make your React app responsive. **Fast, simple syntax, lightweight** and make your code **easy-to-read** are the things what its aim for.
-
-[![NPM](https://img.shields.io/npm/v/react-responsive-component.svg)](https://www.npmjs.com/package/react-responsive-component) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/badge/Open%20In-codeSandbox-blue)](https://codesandbox.io/s/react-responsive-test-bk2ho)
 
 ## Install
 
@@ -16,17 +14,12 @@ yarn add -s @dattr/react-responsive
 ```
 ## Usage
 
+React hook:
 ```javascriptreact
 import React, { Component } from 'react'
+import MyComponent from '@dattr/react-responsive'
 
-import MyComponent from 'react-responsive-component'
-import 'react-responsive-component/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
+function 
 ```
 
 ## License

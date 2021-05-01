@@ -1,7 +1,7 @@
 {
-  "name": "@dattr/react-responsive-component",
-  "version": "1.0.33",
-  "description": "Made with create-react-library",
+  "name": "@dattr/react-responsive",
+  "version": "1.1.0",
+  "description": "A distinct way to make your React app responsive.",
   "author": "dattran1232003",
   "license": "MIT",
   "repository": {
@@ -9,15 +9,15 @@
     "url": "git+https://github.com/dattran1232003/react-responsive.git"
   },
   "main": "./dist/index.umd.js",
-  "module": "./dist/index.module.js",
+  "module": "./dist/index.modern.js",
   "exports": "./dist/index.modern.js",
   "source": "src/index.js",
   "engines": {
     "node": ">=10"
   },
   "scripts": {
-    "build": "microbundle-crl --no-sourcemap",
-    "start": "microbundle-crl watch --no-sourcemap --format modern,module,umd",
+    "build": "microbundle-crl --no-sourcemap --format modern,esm",
+    "start": "microbundle-crl watch --no-sourcemap --format modern,esm",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
@@ -59,7 +59,7 @@
     "url": "https://github.com/dattran1232003/react-responsive/issues"
   },
   "homepage": "https://github.com/dattran1232003/react-responsive#readme",
-  "mangle": { 
+  "mangle": {
     "regex": "^_"
   },
   "dependencies": {}
