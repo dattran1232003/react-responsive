@@ -1,5 +1,5 @@
 ## react-responsive
-A distinct way to make your React app responsive. **Fast, simple syntax, lightweight** and make your code **easy-to-read** are the things what its aim for.
+A distinct way to make your React app responsive. **Fast, simple syntax, lightweight** and keep your code **easy-to-read** are the things what its aim for.
 
 ## Install
 Using NPM:
@@ -11,15 +11,17 @@ Using Yarn:
 yarn add @dattr/react-responsive
 ```
 ## Usage
-[![NPM](https://img.shields.io/badge/Open%20In-codeSandbox-blue)](https://codesandbox.io/s/react-responsive-test-bk2ho)
+[![Open In CodeSandbox](https://img.shields.io/badge/Open%20In-codeSandbox-blue)](https://codesandbox.io/s/react-responsive-test-bk2ho)
 
+### Basic Use:
+Component just display on single device:
 ```jsx
 import React from 'react'
 import Responsive, {
   Mobile,
   Tablet,
   Laptop
-} from "@dattr/react-responsive-component";
+} from "@dattr/react-responsive";
 
 export default function App() {
   return (
@@ -27,16 +29,15 @@ export default function App() {
       <Responsive>
         <Mobile>
           <h3 className="mobile">Mobile Screen</h3>
-          
         </Mobile>
 
         <Tablet only>
           <h2 className="tablet">Tablet Screen</h2>
         </Tablet>
-
+        
+        {/* Laptop screen and up */}
         <Laptop only andUp>
-          {/* Laptop screen and up*/}
-          <h1 className="laptop">Laptop Screen and up</h1>
+          <h1>Laptop Screen and up</h1>
         </Laptop>
       </Responsive>
     </div>
@@ -44,6 +45,19 @@ export default function App() {
 }
 
 ```
+
+If you want to display html just in range of devices (e.g: Mobile to Laptop), use `andUpTo` props:
+```jsx
+<Responsive>
+  <Mobile andUpTo='laptop'>
+    <h3>Mobile Screen</h3>
+  </Mobile>
+</Responsive>
+  );
+}
+```
+Or you can
+
 
 ## License
 
