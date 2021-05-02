@@ -29,35 +29,29 @@ yarn add @dattr/react-responsive
 [![Open In CodeSandbox](https://img.shields.io/badge/Open%20In-codeSandbox-blue)](https://codesandbox.io/s/react-responsive-test-bk2ho)
 
 ### Basic Use:
-set up like this and you're good to go:
+Wrap all Element in `App.js` file (like provide a Context) and you're good to go:
+  
 ```jsx
+// App.js 
 import React from 'react'
-import Responsive, { Mobile, Tablet, Laptop } from "@dattr/react-responsive";
+import Responsive from "@dattr/react-responsive";
 
 export default function App() {
   return (
-    <div className="one-device">
-      <Responsive>
-        <Mobile>
-          <h3 className="mobile">Mobile Screen</h3>
-        </Mobile>
-
-        <Tablet only>
-          <h2 className="tablet">Tablet Screen</h2>
-        </Tablet>
-        
-        {/* Laptop screen and up */}
-        <Laptop only andUp>
-          <h1>Laptop Screen and up</h1>
-        </Laptop>
-      </Responsive>
-    </div>
+    <Responsive>
+      ...
+    </Responsive>
   );
 }
 
 ```
+```jsx
+// some-other-component.js
 
-If not use `only` props, it means show `html` from this **Screen** to **Zero width** (e.g: display h3 from Tablet screen to 0 screen width):
+```
+
+If not use `only` props, it means show `html` from this **Screen** to **Zero screen width** (e.g: display h3 from Tablet screen to 0 screen width):
+
 ```jsx
 <Tablet>
   <h3>Mobile Screen</h3>
@@ -65,13 +59,15 @@ If not use `only` props, it means show `html` from this **Screen** to **Zero wid
 ```
 
 Display `html` just in range of devices (e.g: display h3 from Mobile to Laptop), use `andUpTo` props:
+
 ```jsx
 <Mobile only andUpTo='laptop'>
   <h3>Mobile </h3>
 </Mobile>
 ```
 
-Or you can use `andUpTo` with number represent the **maximum** screen width of device (eg: display h3 from Laptop to 4K screen):
+Or you can use `andUpTo` with number represent the **maximum** screen width of a device (eg: display h3 from Laptop to 4K screen):
+
 ```jsx
 {/* Max screen width of 4K is 8K - 1 */}
 <Laptop only andUpTo={7680 - 1}>
@@ -79,7 +75,8 @@ Or you can use `andUpTo` with number represent the **maximum** screen width of d
 </Laptop>
 ```
 
-### Advanced Usage
+### Advanced Use:
+> comming soon
 
 ## Props
 ### Wrapper
