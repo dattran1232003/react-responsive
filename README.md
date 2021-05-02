@@ -10,7 +10,7 @@ A distinct way to make your React app responsive. **Fast, simple syntax, lightwe
 4. [Props](#props)
    1. [Wrapper](#wrapper)
    2. [Breakpoints](#breakpoints)
-5. [Liencese](#liencese)
+5. [License](#license)
 
 ## Features
 -
