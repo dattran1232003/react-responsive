@@ -36,7 +36,7 @@ Wrap all Element in `App.js` file (like provide a Context) and you're good to go
 import React from 'react'
 import Responsive from "@dattr/react-responsive";
 
-export default const App = (props) => {
+export default function App(props) {
   return (
     <Responsive>
       ...
@@ -45,9 +45,57 @@ export default const App = (props) => {
 }
 
 ```
+in Component file:
 ```jsx
 // some-other-component.js
+import { Mobile, Tablet } from '@dattr/react-responsive'
 
+export default Component (props) {
+  return (
+    <div className='some-classname'>
+      <Mobile>
+      
+      </Mobile>
+    </div>
+  )
+}
+```
+
+If you don't wrapped into the Breakpoints, the content will be display on any screen:
+
+```jsx
+import Responsive from '@dattr/react-responsive';
+
+export default function App(props) {
+  return (
+    <Responsive>
+      Display on Any screen
+    </Responsive>
+  )
+}
+```
+
+Otherwise, the content just display in only devices you've specified:
+```jsx
+import Responsive, { Mobile, Tablet, Laptop } from '@dattr/react-responsive';
+
+export default function App(props) {
+  return (
+    <Responsive>
+      <Mobile>
+        <h3 className="mobile">Mobile Screen</h3>
+      </Mobile>
+
+      <Tablet only>
+        <h2 className="tablet">Tablet Screen</h2>
+      </Tablet>
+
+      <Laptop only andUp>
+        <h1 className="laptop">Laptop Screen and up</h1>
+      </Laptop>
+    </Responsive>
+  )
+}
 ```
 
 If not use `only` props, it means show `html` from this **Screen** to **Zero screen width** (e.g: display h3 from Tablet screen to 0 screen width):
@@ -83,42 +131,7 @@ Or you can use `andUpTo` with number represent the **maximum** screen width of a
 `children (Any):`
 Take the JSX elements, string, number,... and the Breakpoints (Mobile, Tablet, Laptop,...) that you import from this library.
 
-If you don't wrapped into the Breakpoints, the content will be display on any screen:
 
-```jsx
-import Responsive from '@dattr/react-responsive';
-
-export default const App = (props) => {
-  return (
-    <Responsive>
-      Display on Any screen
-    </Responsive>
-  )
-}
-```
-
-Otherwise, the content just display in only devices you've specified:
-```jsx
-import Responsive, { Mobile, Tablet, Laptop } from '@dattr/react-responsive';
-
-export default const App = (props) => {
-  return (
-    <Responsive>
-      <Mobile>
-        <h3 className="mobile">Mobile Screen</h3>
-      </Mobile>
-
-      <Tablet only>
-        <h2 className="tablet">Tablet Screen</h2>
-      </Tablet>
-
-      <Laptop only andUp>
-        <h1 className="laptop">Laptop Screen and up</h1>
-      </Laptop>
-    </Responsive>
-  )
-}
-```
 
 ### Breakpoints
 
