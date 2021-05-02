@@ -3,13 +3,13 @@ A distinct way to make your React app responsive. **Fast, simple syntax, lightwe
 
 ## Table of content
 1. [Features](#features)
-2. [Installation](#installations)
+2. [Installation](#installation)
 3. [Usage](#usage)
-  1. [Basic Usage](#basic-usage)
-  2. [Advanced Usage](#advanced-usage)
+    1. [Basic Usage](#basic-use)
+    2. [Advanced Usage](#advanced-use)
 4. [Props](#props)
-  1. [Wrapper](#wrapper)
-  2. [Breakpoints](#breakpoints)
+    1. [Wrapper](#wrapper)
+    2. [Breakpoints](#breakpoints)
 5. [Liencese](#liencese)
 
 ## Features
@@ -57,10 +57,8 @@ export default function App() {
 
 ```
 
-
-
 If not use `only` props, it means show `html` from this **Screen** to **Zero width** (e.g: display h3 from Tablet screen to 0 screen width):
-```
+```jsx
 <Tablet>
   <h3>Mobile Screen</h3>
 </Tablet>
@@ -72,6 +70,7 @@ Display `html` just in range of devices (e.g: display h3 from Mobile to Laptop),
   <h3>Mobile </h3>
 </Mobile>
 ```
+
 Or you can use `andUpTo` with number represent the **maximum** screen width of device (eg: display h3 from Laptop to 4K screen):
 ```jsx
 {/* Max screen width of 4K is 8K - 1 */}
@@ -79,6 +78,10 @@ Or you can use `andUpTo` with number represent the **maximum** screen width of d
   <h3>Laptop Screen and 4K screen</h3>
 </Laptop>
 ```
+
+## Props
+### Wrapper
+### Breakpoints
 
 ## License
 
