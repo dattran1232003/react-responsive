@@ -3,6 +3,14 @@ A distinct way to make your React app responsive. **Fast, simple syntax, lightwe
 
 ## Table of content
 1. [Features](#features)
+2. [Installation](#installations)
+3. [Usage](#usage)
+  1. [Basic Usage](#basic-usage)
+  2. [Advanced Usage](#advanced-usage)
+4. [Props](#props)
+  1. [Wrapper](#wrapper)
+  2. [Breakpoints](#breakpoints)
+5. [Liencese](#liencese)
 
 ## Features
 -
@@ -21,7 +29,7 @@ yarn add @dattr/react-responsive
 [![Open In CodeSandbox](https://img.shields.io/badge/Open%20In-codeSandbox-blue)](https://codesandbox.io/s/react-responsive-test-bk2ho)
 
 ### Basic Use:
-#### set up like this and you're good to go:
+set up like this and you're good to go:
 ```jsx
 import React from 'react'
 import Responsive, { Mobile, Tablet, Laptop } from "@dattr/react-responsive";
