@@ -1,7 +1,14 @@
 ## react-responsive
 A distinct way to make your React app responsive. **Fast, simple syntax, lightweight** and keep your code **easy-to-read** are the things what its aim for.
 
-## Install
+## Table of content
+1. [Features](#features)
+
+## Features
+-
+-
+
+## Installation
 Using NPM:
 ```bash
 npm i @dattr/react-responsive
@@ -14,14 +21,10 @@ yarn add @dattr/react-responsive
 [![Open In CodeSandbox](https://img.shields.io/badge/Open%20In-codeSandbox-blue)](https://codesandbox.io/s/react-responsive-test-bk2ho)
 
 ### Basic Use:
-Component just display on single device:
+#### set up like this and you're good to go:
 ```jsx
 import React from 'react'
-import Responsive, {
-  Mobile,
-  Tablet,
-  Laptop
-} from "@dattr/react-responsive";
+import Responsive, { Mobile, Tablet, Laptop } from "@dattr/react-responsive";
 
 export default function App() {
   return (
@@ -46,18 +49,28 @@ export default function App() {
 
 ```
 
-If you want to display html just in range of devices (e.g: Mobile to Laptop), use `andUpTo` props:
-```jsx
-<Responsive>
-  <Mobile andUpTo='laptop'>
-    <h3>Mobile Screen</h3>
-  </Mobile>
-</Responsive>
-  );
-}
-```
-Or you can
 
+
+If not use `only` props, it means show `html` from this **Screen** to **Zero width** (e.g: display h3 from Tablet screen to 0 screen width):
+```
+<Tablet>
+  <h3>Mobile Screen</h3>
+</Tablet>
+```
+
+Display `html` just in range of devices (e.g: display h3 from Mobile to Laptop), use `andUpTo` props:
+```jsx
+<Mobile only andUpTo='laptop'>
+  <h3>Mobile </h3>
+</Mobile>
+```
+Or you can use `andUpTo` with number represent the **maximum** screen width of device (eg: display h3 from Laptop to 4K screen):
+```jsx
+{/* Max screen width of 4K is 8K - 1 */}
+<Laptop only andUpTo={7680 - 1}>
+  <h3>Laptop Screen and 4K screen</h3>
+</Laptop>
+```
 
 ## License
 
