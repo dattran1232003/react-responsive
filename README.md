@@ -5,8 +5,8 @@ A distinct way to make your React app responsive. **Fast, simple syntax, lightwe
 1. [Features](#features)
 2. [Installation](#installation)
 3. [Usage](#usage)
-   1. [Basic Usage](#basic-use)
-   2. [Advanced Usage](#advanced-use)
+   1. [Basic Use](#basic-use)
+   2. [Advanced Use](#advanced-use)
 4. [Props](#props)
    1. [Wrapper](#wrapper)
    2. [Breakpoints](#breakpoints)
@@ -36,7 +36,7 @@ Wrap all Element in `App.js` file (like provide a Context) and you're good to go
 import React from 'react'
 import Responsive from "@dattr/react-responsive";
 
-export default function App() {
+export default const App = (props) => {
   return (
     <Responsive>
       ...
@@ -80,6 +80,46 @@ Or you can use `andUpTo` with number represent the **maximum** screen width of a
 
 ## Props
 ### Wrapper
+`children (Any):`
+Take the JSX elements, string, number,... and the Breakpoints (Mobile, Tablet, Laptop,...) that you import from this library.
+
+If you don't wrapped into the Breakpoints, the content will be display on any screen:
+
+```jsx
+import Responsive from '@dattr/react-responsive';
+
+export default const App = (props) => {
+  return (
+    <Responsive>
+      Display on Any screen
+    </Responsive>
+  )
+}
+```
+
+Otherwise, the content just display in only devices you've specified:
+```jsx
+import Responsive, { Mobile, Tablet, Laptop } from '@dattr/react-responsive';
+
+export default const App = (props) => {
+  return (
+    <Responsive>
+      <Mobile>
+        <h3 className="mobile">Mobile Screen</h3>
+      </Mobile>
+
+      <Tablet only>
+        <h2 className="tablet">Tablet Screen</h2>
+      </Tablet>
+
+      <Laptop only andUp>
+        <h1 className="laptop">Laptop Screen and up</h1>
+      </Laptop>
+    </Responsive>
+  )
+}
+```
+
 ### Breakpoints
 
 ## License
