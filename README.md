@@ -5,11 +5,11 @@ A distinct way to make your React app responsive. **Fast, simple syntax, lightwe
 1. [Features](#features)
 2. [Installation](#installation)
 3. [Usage](#usage)
-    1. [Basic Usage](#basic-use)
-    2. [Advanced Usage](#advanced-use)
+   1. [Basic Usage](#basic-use)
+   2. [Advanced Usage](#advanced-use)
 4. [Props](#props)
-    1. [Wrapper](#wrapper)
-    2. [Breakpoints](#breakpoints)
+   1. [Wrapper](#wrapper)
+   2. [Breakpoints](#breakpoints)
 5. [Liencese](#liencese)
 
 ## Features
@@ -78,6 +78,8 @@ Or you can use `andUpTo` with number represent the **maximum** screen width of d
   <h3>Laptop Screen and 4K screen</h3>
 </Laptop>
 ```
+
+### Advanced Usage
 
 ## Props
 ### Wrapper
