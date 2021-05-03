@@ -33,7 +33,7 @@ Wrap all Element in `App.js` file (like provide a Context) and you're good to go
   
 ```jsx
 // App.js 
-import React from 'react'
+import React from 'react';
 import Responsive from "@dattr/react-responsive";
 
 export default function App(props) {
@@ -48,9 +48,9 @@ export default function App(props) {
 in Component file:
 ```jsx
 // some-other-component.js
-import { Mobile, Tablet } from '@dattr/react-responsive'
+import { Mobile, Tablet } from '@dattr/react-responsive';
 
-export default Component (props) {
+export default function Component (props) {
   return (
     <div className='some-classname'>
       <Mobile>
@@ -61,21 +61,7 @@ export default Component (props) {
 }
 ```
 
-If you don't wrapped into the Breakpoints, the content will be display on any screen:
-
-```jsx
-import Responsive from '@dattr/react-responsive';
-
-export default function App(props) {
-  return (
-    <Responsive>
-      Display on Any screen
-    </Responsive>
-  )
-}
-```
-
-Otherwise, the content just display in only devices you've specified:
+TheContent just display in **only** Breakpoint (Mobile, Tablet, Laptop,...) you've specified:
 ```jsx
 import Responsive, { Mobile, Tablet, Laptop } from '@dattr/react-responsive';
 
@@ -97,6 +83,20 @@ export default function App(props) {
   )
 }
 ```
+
+If you don't wrapped into the Breakpoints, the content will be display on any screen:
+```jsx
+import Responsive from '@dattr/react-responsive';
+
+export default function App(props) {
+  return (
+    <Responsive>
+      Display on Any screen
+    </Responsive>
+  )
+}
+```
+
 
 If not use `only` props, it means show `html` from this **Screen** to **Zero screen width** (e.g: display h3 from Tablet screen to 0 screen width):
 
