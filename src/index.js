@@ -1,2 +1,2 @@
-export * from './Screen.jsx'
+export * from './Breakpoints.jsx'
 export { default } from './Responsive.jsx'

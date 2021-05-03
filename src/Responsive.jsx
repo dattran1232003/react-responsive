@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import * as Breakpoints from './Screen'
 import { useDeviceWidth } from './hooks'
+import * as Breakpoints from './Breakpoints'
 import { ResponsiveContext } from './context'
 
 Responsive.propTypes = {
