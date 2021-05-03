@@ -31,10 +31,14 @@ function resizeWindow(size) {
   window.dispatchEvent(new Event("resize"))
 }
 
+function mount(component) {
+  render(component, container)
+}
+
 const resizeWindowThenMount = wdSize => component => {
   act(() => {
     resizeWindow(wdSize)
-    render(component, container)
+    mount(component)
   })
 }
 
@@ -100,4 +104,3 @@ it('should render even screen width greater than (or equal) breakpoint',() => {
   // but it still render
   expect(container.textContent).toBe('Mobile and up')
 })
-

@@ -8,9 +8,7 @@ Responsive.propTypes = {
   children: PropTypes.node
 }
 
-
-function Responsive(props) {
-  const { children } = props
+function Responsive({ children=<div/> }) {
   const childrens = liftIntoList(children)
 
   const deviceWidth = useDeviceWidth()
