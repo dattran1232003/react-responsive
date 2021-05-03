@@ -101,4 +101,3 @@ it('should render even screen width greater than (or equal) breakpoint',() => {
   expect(container.textContent).toBe('Mobile and up')
 })
 
-it('should react a breakpoint')

@@ -5,23 +5,18 @@ import { useDeviceWidth } from './hooks'
 import { ResponsiveContext } from './context'
 
 Responsive.propTypes = {
-  children: PropTypes.node,
-  mobileFirst: PropTypes.bool
-}
-
-Responsive.defaultProps = {
-  mobileFirst: true
+  children: PropTypes.node
 }
 
 
 function Responsive(props) {
-  const { children, mobileFirst = true } = props
+  const { children } = props
   const childrens = liftIntoList(children)
 
   const deviceWidth = useDeviceWidth()
 
   return (
-    <ResponsiveContext.Provider value={{ deviceWidth, mobileFirst }}>
+    <ResponsiveContext.Provider value={{ deviceWidth }}>
       {childrens}
     </ResponsiveContext.Provider>
   )
