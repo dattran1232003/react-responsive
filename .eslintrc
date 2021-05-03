@@ -18,7 +18,6 @@
     }
   },
   "rules": {
-    "react/no-unused-prop-types": 0,
     "import/export": 0
   }
 }

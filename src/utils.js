@@ -17,12 +17,19 @@ const getDeviceWidthFromDict = deviceName => {
 }
 
 const checkTypeAndConvert = device => {
+  if (device === 'CUSTOM_NO_NAME') return null
   switch (typeof device)  {
     case 'string': return getDeviceWidthFromDict(device)
     case 'number': return device
-    default: throw new Error(`Type of device must be number or string but receive ${typeof device} instead.`)
+    default: throw new Error(`Type of device must be number or string but receive ${(typeof device)} instead.`)
   }
 }
+
+export const liftIntoList = (a) => {
+  if (Array.isArray(a)) return a
+  return [a] // lift it into array
+}
+
 
 export const getDeviceWidth = device => {
   return checkTypeAndConvert(device)

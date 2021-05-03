@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { liftIntoList } from './utils'
 import { useDeviceWidth } from './hooks'
 import * as Breakpoints from './Breakpoints'
 import { ResponsiveContext } from './context'
@@ -19,11 +20,6 @@ function Responsive({ children=<div/> }) {
     </ResponsiveContext.Provider>
   )
 }
-const liftIntoList = (a) => {
-  if (Array.isArray(a)) return a
-  return [a] // lift it into array
-}
-
 // export all screen breakpoint (Mobile, Tablet, Laptop,...) with Responsive component
 // user can use <Responsive.Mobile /> instead of <Mobile />
 // without import { Mobile } from 'responsive'
