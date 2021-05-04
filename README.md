@@ -48,7 +48,7 @@ export default function App(props) {
 ```
 in Component file:
 ```jsx
-// some-other-component.js
+// some-component.jsx
 import { Mobile, Tablet } from '@dattr/react-responsive';
 
 export default function Component (props) {
@@ -77,10 +77,34 @@ export default function Component (props) {
 
 ### Advanced Use:
 
+Isn't that enough for you? Relax, just use `createCustom` function and you'll have any screen you want.
+> The custom components which created by this function have same props as other Breakpoints import from this library.
+```jsx
+// some-component.jsx
+import { createCustom } from '@dattr/react-responsive';
+
+function Component(props) {
+   const [FourK, EightK] = createCustom([
+    { minWidth: 3840, maxWidth: 7680 - 1 },
+    { minWidth: 7680, maxWidth: Infinity } // Infinity equal andUp prop by default
+   ])
+   
+  return (
+    <h3 className='large-screen-text'>
+      <FourK only>This is text of h3 tag which display on 4K screen only</FourK>
+      <EightK only>This is text of h3 tag which display 8K screen only and up</EightK>
+    </h3>
+  )
+}
+
+export default Component
+```
 
 ### Caution:
 
-⚠️ **Do not** use `andUp` prop without `only` prop:
+**Do not**:
+
+⚠️ use `andUp` prop without `only` prop:
 ```jsx
 <Tablet andUp>
   <h3>This will display on any screen</h3>
