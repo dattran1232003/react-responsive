@@ -32,7 +32,7 @@ yarn add @dattr/react-responsive
 ### Basic Use:
 Wrap all Element in `App.js` file (like provide a Context) and you're good to go:
   
-```jsx
+```javascript
 // App.js 
 import React from 'react';
 import Responsive from "@dattr/react-responsive";
@@ -47,7 +47,7 @@ export default function App(props) {
 
 ```
 in Component file:
-```jsx
+```javascript
 // some-component.jsx
 import { Mobile, Tablet } from '@dattr/react-responsive';
 
@@ -79,7 +79,7 @@ export default function Component (props) {
 
 Isn't that enough for you? Relax, just use `createCustom` function and you'll have any screen you want.
 > The custom components which created by this function have same props as other Breakpoints import from this library.
-```jsx
+```javascript
 // some-component.jsx
 import { createCustom } from '@dattr/react-responsive';
 
@@ -105,7 +105,7 @@ export default Component
 **Do not**:
 
 ⚠️ use `andUp` prop without `only` prop:
-```jsx
+```javascript
 <Tablet andUp>
   <h3>This will display on any screen</h3>
 </Tablet>
@@ -115,7 +115,7 @@ export default Component
 ✅  Use `andUp` together with `only`
 
 ✅  Unwrap it instead:
-```jsx
+```javascript
  <h3>This will display on any screen</h3>
 ```
 
