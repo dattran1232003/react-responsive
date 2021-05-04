@@ -76,16 +76,20 @@ export default function Component (props) {
 
 
 ### Advanced Use:
-> comming soon
+
 
 ### Caution:
 
-⚠️  use Breakpoints with `andUp` prop and without `only` prop:
+⚠️ **Do not** use `andUp` prop without `only` prop:
 ```jsx
 <Tablet andUp>
   <h3>This will display on any screen</h3>
 </Tablet>
 ```
+**solution:**
+
+✅  Use `andUp` together with `only`
+
 ✅  Unwrap it instead:
 ```jsx
  <h3>This will display on any screen</h3>
