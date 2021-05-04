@@ -54,84 +54,46 @@ export default function Component (props) {
   return (
     <div className='some-classname'>
       <Mobile>
-      
+        <h3>This is display on Mobile screen only and not display on larger screen</h3>
       </Mobile>
+      
+      <Tablet>
+        <h3>This is display on Tablet and smaller screen. But not display on larger screen.</h3>
+      </Tablet>
+      
+      <Tablet only>
+        <h3>This is display on Tablet screen only and not display on larger screen or smaller screen</h3>
+      </Tablet>
+      
+      <Tablet only andUp>
+        <h3>This is display on Tablet and larger screen (opposite to <Tablet> with no props), but not display on smaller screen like Mobile</h3>
+      </Tablet>
     </div>
   )
 }
 ```
 
-TheContent just display in **only** Breakpoint (Mobile, Tablet, Laptop,...) you've specified:
-```jsx
-import Responsive, { Mobile, Tablet, Laptop } from '@dattr/react-responsive';
-
-export default function App(props) {
-  return (
-    <Responsive>
-      <Mobile>
-        <h3 className="mobile">Mobile Screen</h3>
-      </Mobile>
-
-      <Tablet only>
-        <h2 className="tablet">Tablet Screen</h2>
-      </Tablet>
-
-      <Laptop only andUp>
-        <h1 className="laptop">Laptop Screen and up</h1>
-      </Laptop>
-    </Responsive>
-  )
-}
-```
-
-If you don't wrapped into the Breakpoints, the content will be display on any screen:
-```jsx
-import Responsive from '@dattr/react-responsive';
-
-export default function App(props) {
-  return (
-    <Responsive>
-      Display on Any screen
-    </Responsive>
-  )
-}
-```
-
-
-If not use `only` props, it means show `html` from this **Screen** to **Zero screen width** (e.g: display h3 from Tablet screen to 0 screen width):
-
-```jsx
-<Tablet>
-  <h3>Mobile Screen</h3>
-</Tablet>
-```
-
-Display `html` just in range of devices (e.g: display h3 from Mobile to Laptop), use `andUpTo` props:
-
-```jsx
-<Mobile only andUpTo='laptop'>
-  <h3>Mobile </h3>
-</Mobile>
-```
-
-Or you can use `andUpTo` with number represent the **maximum** screen width of a device (eg: display h3 from Laptop to 4K screen):
-
-```jsx
-{/* Max screen width of 4K is 8K - 1 */}
-<Laptop only andUpTo={7680 - 1}>
-  <h3>Laptop Screen and 4K screen</h3>
-</Laptop>
-```
 
 ### Advanced Use:
 > comming soon
+
+## Caution:
+
+⚠️  use Breakpoints with `andUp` prop and without `only` prop:
+```jsx
+<Tablet andUp>
+  <h3>This will display on any screen</h3>
+</Tablet>
+```
+✅  Unwrap it instead:
+```jsx
+ <h3>This will display on any screen</h3>
+```
 
 ## Props
 ### Wrapper
 `children (Any):`
 Take the JSX elements, string, number,... and the Breakpoints (Mobile, Tablet, Laptop,...) that you import from this library.
-
-
 
 ### Breakpoints
 
