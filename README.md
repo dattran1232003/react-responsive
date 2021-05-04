@@ -7,6 +7,7 @@ A distinct way to make your React app responsive. **Fast, simple syntax, lightwe
 3. [Usage](#usage)
    1. [Basic Use](#basic-use)
    2. [Advanced Use](#advanced-use)
+   3. [Caution](#caution)
 4. [Props](#props)
    1. [Wrapper](#wrapper)
    2. [Breakpoints](#breakpoints)
@@ -77,7 +78,7 @@ export default function Component (props) {
 ### Advanced Use:
 > comming soon
 
-## Caution:
+### Caution:
 
 ⚠️  use Breakpoints with `andUp` prop and without `only` prop:
 ```jsx
