@@ -67,7 +67,7 @@ export default function Component (props) {
       </Tablet>
       
       <Tablet only andUp>
-        <h3>This is display on Tablet and larger screen (opposite to <Tablet> with no props), but not display on smaller screen like Mobile</h3>
+        <h3>This is display on Tablet and larger screen (opposite to using Tablet with no props), but not display on smaller screen like Mobile</h3>
       </Tablet>
     </div>
   )
