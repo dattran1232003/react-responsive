@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 import { ResponsiveContext } from './context'
 import { liftIntoList, getDeviceWidth, inRange } from './utils'
 
-// using self-invoking function to avoid create global variables unnecessary
+// using self-invoking function to avoid create unnecessary global variables
 Mobile.propTypes = (function propTypes() { 
   const ScreenType = PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]) 
   return {
     children: PropTypes.node,
-      only: PropTypes.bool,
-      andUp: PropTypes.bool,
-      andUpTo: ScreenType
+    only: PropTypes.bool,
+    andUp: PropTypes.bool,
+    andUpTo: ScreenType
   }
 })()
 
@@ -69,7 +69,7 @@ export function Any({ children }) {
 function customContainer({ minWidth, maxWidth, deviceName='CUSTOM_NO_NAME' }) {
   UsableCustom.propTypes = { ...Mobile.propTypes }
   // Component
-  function UsableCustom({ children, only, andUp, andUpTo }) {
+  function CustomComponent({ children, only, andUp, andUpTo }) {
     const { deviceWidth } = useContext(ResponsiveContext)
 
     const customWidth = {
@@ -81,7 +81,7 @@ function customContainer({ minWidth, maxWidth, deviceName='CUSTOM_NO_NAME' }) {
     return inCustomRange(deviceWidth) && children
   }
 
-  return UsableCustom
+  return CustomComponent 
 }
 
 /** 

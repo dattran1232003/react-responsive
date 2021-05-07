@@ -52,6 +52,7 @@
     "react-dom": "^17.0.2",
     "react-scripts": "^3.4.1"
   },
+  "dependencies": {},
   "files": [
     "dist"
   ],
@@ -62,5 +63,9 @@
   "mangle": {
     "regex": "^_"
   },
-  "dependencies": {}
+  "keywords": [
+    "jsx",
+    "react",
+    "responsive"
+  ]
 }
