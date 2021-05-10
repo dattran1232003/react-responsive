@@ -6,4 +6,4 @@
 - Improve the introduction.
 
 ## [1.2.3] - 2021-05-04
-Stabel version.
+Stable version.

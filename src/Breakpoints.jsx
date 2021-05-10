@@ -67,7 +67,7 @@ export function Any({ children }) {
 }
 
 function customContainer({ minWidth, maxWidth, deviceName='CUSTOM_NO_NAME' }) {
-  UsableCustom.propTypes = { ...Mobile.propTypes }
+  CustomComponent.propTypes = { ...Mobile.propTypes }
   // Component
   function CustomComponent({ children, only, andUp, andUpTo }) {
     const { deviceWidth } = useContext(ResponsiveContext)
