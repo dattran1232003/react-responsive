@@ -1,6 +1,11 @@
 # Change Log
 
-## [1.2.4] - 2021-03-07
+## [1.2.5] - 2021-05-10
+
+## Fixed
+- UsableCustom is not defined
+
+## [1.2.4] - 2021-05-07
 
 ### Fixed
 - Improve the introduction.
